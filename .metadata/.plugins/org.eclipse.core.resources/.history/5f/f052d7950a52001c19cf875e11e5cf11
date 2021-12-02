@@ -1,0 +1,67 @@
+package com.product.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.product.model.Product;
+import com.product.service.ProductServiceImpl;
+
+@RestController
+@RequestMapping("/product")
+public class ProductResource {
+
+	@Autowired
+	ProductServiceImpl proService;
+	
+	@GetMapping("/allproduct")
+	 public List<Product> getAllProducts()
+	 {
+		 return proService.getAllProducts();
+	 }
+	@GetMapping("/productbyname/{productName}")
+	public List<Product> getProductByName(@PathVariable String productName)
+	{
+		return proService.getProductByName(productName);
+	}
+	
+	@GetMapping("/productcategory/{productCategory}")
+	public List<Product> getProductByCategory(@PathVariable("productCategory") String productCategoty)
+	{
+		return proService.getProductByCategory(productCategoty);
+	}
+	
+	@GetMapping("/producttype/{type}")
+	public List<Product> getProductByType(@PathVariable String productType)
+	{
+		return proService.getProductByType(productType);
+	}
+	
+	@PostMapping("/addproduct")
+	public Product addProduct(@RequestBody Product product)
+	{
+		return proService.addProduct(product);
+	}
+	@PutMapping("/updateproduct/{productId}")
+	public Product updateProduct(@RequestBody Product product)
+	{
+		return proService.updateProduct(product); 
+	}
+	@DeleteMapping("deletebyname/{productName}")
+	public Product deleteByProductName(@PathVariable("productName") String product)
+	{
+		return  proService.deleteByProductName(product);
+	}
+	
+	
+	
+
+}

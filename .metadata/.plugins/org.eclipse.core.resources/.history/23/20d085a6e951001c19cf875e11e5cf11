@@ -1,0 +1,53 @@
+package com.product.service;
+
+import java.util.List;
+
+import com.product.model.Product;
+import com.product.repository.ProductRepository;
+
+public class ProductServiceImpl implements ProductService {
+
+	private ProductRepository productrepository;
+	@Override
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> getProductByName(String productName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> getProductByCategory(String category) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Product> getProductByType(String productType) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product addProduct(Product product) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product updateProduct(Product product) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Product deleteByProductName(String productName) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

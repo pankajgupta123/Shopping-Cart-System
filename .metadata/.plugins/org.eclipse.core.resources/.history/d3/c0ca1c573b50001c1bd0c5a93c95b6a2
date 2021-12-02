@@ -1,0 +1,81 @@
+package com.profile.userprofile.daolayer;
+
+import java.util.List;
+import java.util.Optional;
+
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.support.BeanDefinitionDsl.Role;
+import org.springframework.web.bind.annotation.RequestBody;
+
+
+import com.profile.userprofile.model.UserProfile;
+import com.profile.userprofile.repository.ProfileRepository;
+
+public class ProfileServiceImpl implements ProfileService {
+
+	@Override
+	public UserProfile updateProfile() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<UserProfile> getAllProfiles() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getByProfile() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String deleteProfile(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserProfile addNewMerchantProfile(UserProfile userprofile) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserProfile addNewDeliverProfile(UserProfile userprofile) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getByUserName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserProfile addNewCustomerProfile(UserProfile userprofile) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public UserProfile updateProfile(UserProfile userprofile) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<UserProfile> findByMobileNo(Long mobileNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+     
+
+	
+	}
+	

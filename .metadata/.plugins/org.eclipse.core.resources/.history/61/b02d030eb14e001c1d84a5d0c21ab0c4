@@ -1,0 +1,5 @@
+package com.ewalllet.repository;
+
+public class EwalletServiceImpl {
+
+}

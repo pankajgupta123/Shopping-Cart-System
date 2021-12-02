@@ -1,0 +1,5 @@
+package com.profile.userprofile.daolayer;
+
+public interface ProfileService {
+
+}

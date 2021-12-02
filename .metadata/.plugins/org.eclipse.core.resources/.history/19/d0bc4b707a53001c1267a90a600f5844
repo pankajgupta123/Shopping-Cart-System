@@ -1,0 +1,65 @@
+package com.product.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.product.exception.BusinessException;
+import com.product.exception.EmptyInputException;
+import com.product.model.Product;
+import com.product.repository.ProductRepository;
+
+public class ProductServiceImpl implements ProductService {
+
+	@Autowired
+	private ProductRepository productRepository;
+	@Override
+	public List<Product> getAllProducts() {
+		// TODO Auto-generated method stub
+		List<Product> proList = productRepository.findAll();
+		if(proList.isEmpty())
+			throw new BusinessException("604" , "List is completely empty");
+		return proList;
+	}
+
+	@Override
+	public List<Product> getProductByName(String productName) {
+		// TODO Auto-generated method stub
+		
+		return productRepository.findByProductName(productName);
+	}
+
+	@Override
+	public List<Product> getProductByCategory(String category) {
+		// TODO Auto-generated method stub
+		return productRepository.findByCategory(category);
+	}
+
+	@Override
+	public List<Product> getProductByType(String productType) {
+		// TODO Auto-generated method stub
+		return productRepository.findByProductType(productType);
+	}
+
+	@Override
+	public Product addProduct(Product product) {
+		if(product.getProductName().isEmpty()|| product.getProductName().length()==0) {
+			throw new EmptyInputException("601" , "Input Fields Are Empty");
+			
+		}
+		return productRepository.save(product);
+	}
+
+	@Override
+	public Product updateProduct(Product product) {
+		// TODO Auto-generated method stub
+		return productRepository.save(product);
+	}
+
+	@Override
+	public Product deleteByProductName(String productName) {
+		// TODO Auto-generated method stub
+		return productRepository.deleteByProductName(productName);
+	}
+
+}

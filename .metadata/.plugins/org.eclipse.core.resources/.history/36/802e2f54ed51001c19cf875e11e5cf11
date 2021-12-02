@@ -1,0 +1,44 @@
+package com.product.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.product.model.Product;
+import com.product.service.ProductServiceImpl;
+
+@RestController
+@RequestMapping("/product")
+public class ProductResource {
+
+	@Autowired
+	ProductServiceImpl proService;
+	
+	@GetMapping("/allproduct")
+	 public List<Product> getAllProducts()
+	 {
+		 return proService.getAllProducts();
+	 }
+	@GetMapping("/productbyname/{product}")
+	public List<Product> getProductByName(@PathVariable String productName)
+	{
+		return proService.getProductByName(productName);
+	}
+	
+	@GetMapping("/productcategory/{category}")
+	public List<Product> getProductByCategory(@PathVariable String productCategoty)
+	{
+		return proService.getProductByCategory(productCategoty);
+	}
+	
+	@Getmapping("/producttype/{type}")
+	public List<Product> getProductByType(String productType)
+	{
+		return proService.getProductByType(productType);
+	}
+
+}

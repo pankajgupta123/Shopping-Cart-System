@@ -1,0 +1,12 @@
+server:
+  port: 8007
+  
+spring:
+  cloud:
+    gateway:
+      routes:
+      #Route Mapping
+      - id: product-service               #RouteIdentifiler
+        uri: http://localhost:8006/       #Respective microservice URL which needs to be  
+        predicates:
+        - Path= /product/**          

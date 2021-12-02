@@ -1,0 +1,11 @@
+package com.product.exception;
+
+import org.springframework.web.bind.annotation.ControllerAdvice;
+
+@ControllerAdvice  //global exception handler
+public class ExceptionController {
+
+	
+	
+	
+}

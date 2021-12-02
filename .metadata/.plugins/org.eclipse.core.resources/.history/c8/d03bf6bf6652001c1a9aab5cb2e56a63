@@ -1,0 +1,4 @@
+server.port=8006
+spring.application.name=product-service
+spring.data.mongodb.database=ProductService
+spring.data.mongodb.uri=mongodb+srv://dbpankaj:pankajdb@cluster0.capxo.mongodb.net/ProductService?retryWrites=true&w=majority
