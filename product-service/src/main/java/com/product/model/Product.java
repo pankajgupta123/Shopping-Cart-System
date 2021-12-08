@@ -72,7 +72,7 @@ public class Product {
 				+ ", category=" + category + ", image=" + image + ", price=" + price + ", rating=" + rating
 				+ ", description=" + description + "]";
 	}
-	public Product(int productId, String productType, String productName, String category, String image, Double price,
+	public Product(int productId, String productType, String productName, String category, String image, int price,
 			int rating, String description) {
 		super();
 		this.productId = productId;
@@ -80,17 +80,14 @@ public class Product {
 		this.productName = productName;
 		this.category = category;
 		this.image = image;
-		this.price = price;
+		this.price = (double) price;
 		this.rating = rating;
 		this.description = description;
 	}
 	public Product() {
 		super();
 	}
-	public Product(int productId2, String productType2, String productName2, String category2, String image2, int i,
-			int rating2, String description2) {
-		// TODO Auto-generated constructor stub
-	}
+	 
 	@Override
 	public int hashCode() {
 		return Objects.hash(category, description, image, price, productId, productName, productType, rating);

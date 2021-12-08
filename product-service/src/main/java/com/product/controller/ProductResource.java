@@ -26,7 +26,7 @@ public class ProductResource {
 	@Autowired
 	ProductService proService;
 	
-	@GetMapping("/getallproduct")
+	@GetMapping("/getAllProduct")
 	public List<Product> getAllProducts() {
 		return proService.getAllProducts();
 	}
@@ -35,7 +35,7 @@ public class ProductResource {
 		
 		return proService.getProductById(productId);
 	}
-	@PostMapping("/addproduct")
+	@PostMapping("/addProduct")
 	public Product addProduct(@RequestBody Product product) {
 		
 		return proService.addProduct(product);

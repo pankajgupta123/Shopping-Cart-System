@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/style.css}"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+<form method="post" action="/submitPaymentDetail">
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-4 register-left">
+            </div>
+            <div class="col-md-8 register-right">
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <h3 class="register-heading">Welcome to Paytm Payment Bank</h3>
+                        <div class="row register-form">
+                            <div class="col-md-10">
+                                <div class="form-group">
+                                <label>
+                                Enter  Order Id:
+                                </label>
+                                
+                                     <input id="ORDER_ID" tabindex="1" maxlength="20" size="20" placeholder="Order_Id"
+                                           name="ORDER_ID" autocomplete="off" class="form-control" >
+                                </div>
+                                <label>Enter Customer Id: 
+                                </label>
+                                
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Customer_Id" value=""
+                                           name="CUST_ID"/>
+                                </div>
+                                <label>Customer Name:
+                                </label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter Your Name" value=""
+                                           name="name"/>
+                                </div>
+                                <label>Customer Mobile Number:
+                                </label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Enter Mobile Number" value=""
+                                           name="CHANNEL_ID"/>
+                                </div>
+                                <label>Amount:
+                                </label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Total Amount" value=""
+                                           name="TXN_AMOUNT"/>
+                                </div>
+                                <button type="submit" class="btnRegister" style="align : center">Pay with Paytm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>

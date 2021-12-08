@@ -42,7 +42,7 @@ public class ProductServiceImpl implements ProductService {
 	@Override
 	public Product addProduct(Product product) {
 		if(product.getProductName().isBlank() || product.getProductName().length()==0) {
-			throw new EmptyInputException("786","value can not be null");
+			throw new EmptyInputException("786","product name cannot be null");
 		}
 		else
 			return productRepository.save(product);
@@ -56,7 +56,7 @@ public class ProductServiceImpl implements ProductService {
 		    return "Product updated by Id"+productId;
 		}
 		else {
-			throw new ProductNotFoundException("234" ,"Product Not Found");
+			throw new ProductNotFoundException("234" ,"product not found");
 		}
 	}
 
